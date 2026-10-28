@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="192" viewBox="0 0 620 192" role="img" aria-labelledby="title desc">
+  <title id="title">Richtpunt campus Ninove-Zottegem</title>
+  <desc id="desc">Logo met de tekst Richtpunt en campus Ninove-Zottegem in goudgeel.</desc>
+  <rect width="620" height="192" fill="none"/>
+  <g fill="#e0b000" font-family="Arial, Helvetica, sans-serif">
+    <text x="8" y="100" font-size="76" font-weight="700" letter-spacing="-2">Richtpunt</text>
+    <text x="55" y="148" font-size="34" font-weight="400" letter-spacing=".1">campus Ninove-Zottegem</text>
+  </g>
+</svg>

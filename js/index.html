@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="nl" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Buienradar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="cs">
+        <circle cx="21" cy="38" r="9" />
+        <circle cx="33" cy="29" r="12" />
+        <circle cx="45" cy="37" r="10" />
+        <rect x="21" y="38" width="24" height="9" />
+      </g>
+      <g id="cloud">
+        <use href="#cs" fill="var(--icon-ink)" stroke="var(--icon-ink)" stroke-width="5" stroke-linejoin="round" />
+        <use href="#cs" fill="var(--icon-bg)" />
+      </g>
+      <g id="sun">
+        <circle cx="32" cy="32" r="10" fill="var(--orange)" />
+        <g stroke="var(--orange)" stroke-width="3.2" stroke-linecap="round">
+          <path d="M32 12v5M32 47v5M12 32h5M47 32h5M18 18l3.5 3.5M42.5 42.5L46 46M46 18l-3.5 3.5M21.5 42.5L18 46" />
+        </g>
+      </g>
+      <mask id="mm">
+        <rect width="64" height="64" fill="#fff" />
+        <circle cx="41" cy="25" r="14" fill="#000" />
+      </mask>
+      <g id="moon">
+        <circle cx="31" cy="33" r="17" fill="var(--orange)" mask="url(#mm)" />
+      </g>
+      <g id="rain1" stroke="var(--icon-ink)" stroke-width="3" stroke-linecap="round">
+        <path d="M24 53l-3 6M33 53l-3 6M42 53l-3 6" />
+      </g>
+      <g id="rain2" stroke="var(--icon-ink)" stroke-width="3" stroke-linecap="round">
+        <path d="M21 52l-3 6M29 52l-3 6M37 52l-3 6M45 52l-3 6M25 60l-2 4M33 60l-2 4M41 60l-2 4" />
+      </g>
+      <g id="rain3" stroke="var(--icon-ink)" stroke-width="3.4" stroke-linecap="round">
+        <path
+          d="M19 51l-4 8M26 51l-4 8M33 51l-4 8M40 51l-4 8M47 51l-4 8M23 61l-1.5 3M30 61l-1.5 3M37 61l-1.5 3M44 61l-1.5 3" />
+      </g>
+
+      <symbol id="i-zon" viewBox="0 0 64 64">
+        <use href="#sun" />
+      </symbol>
+      <symbol id="i-maan" viewBox="0 0 64 64">
+        <use href="#moon" />
+      </symbol>
+      <symbol id="i-half" viewBox="0 0 64 64">
+        <g transform="translate(-4,-7) scale(.85)">
+          <use href="#sun" />
+        </g>
+        <g transform="translate(7,11) scale(.85)">
+          <use href="#cloud" />
+        </g>
+      </symbol>
+      <symbol id="i-half-nacht" viewBox="0 0 64 64">
+        <g transform="translate(-9,-8) scale(.8)">
+          <use href="#moon" />
+        </g>
+        <g transform="translate(7,11) scale(.85)">
+          <use href="#cloud" />
+        </g>
+      </symbol>
+      <symbol id="i-wolk" viewBox="0 0 64 64">
+        <g transform="translate(-3,2) scale(1.1)">
+          <use href="#cloud" />
+        </g>
+      </symbol>
+      <symbol id="i-motregen" viewBox="0 0 64 64">
+        <g transform="translate(7,4) scale(.85)">
+          <use href="#cloud" />
+        </g>
+        <use href="#rain1" transform="translate(0,-1)" />
+      </symbol>
+      <symbol id="i-regen" viewBox="0 0 64 64">
+        <g transform="translate(7,2) scale(.85)">
+          <use href="#cloud" />
+        </g>
+        <use href="#rain2" transform="translate(0,-2)" />
+      </symbol>
+      <symbol id="i-zwaar" viewBox="0 0 64 64">
+        <g transform="translate(7,0) scale(.85)">
+          <use href="#cloud" />
+        </g>
+        <use href="#rain3" transform="translate(0,-4)" />
+      </symbol>
+      <symbol id="i-onweer" viewBox="0 0 64 64">
+        <g transform="translate(7,0) scale(.85)">
+          <use href="#cloud" />
+        </g>
+        <path d="M35 40 26 54h7l-3 9 12-15h-7l3-8z" fill="var(--orange)" stroke="var(--icon-bg)" stroke-width="1.5"
+          stroke-linejoin="round" />
+      </symbol>
+      <symbol id="i-sneeuw" viewBox="0 0 64 64">
+        <g transform="translate(7,0) scale(.85)">
+          <use href="#cloud" />
+        </g>
+        <g fill="var(--icon-ink)">
+          <circle cx="22" cy="52" r="2.6" />
+          <circle cx="32" cy="55" r="2.6" />
+          <circle cx="42" cy="52" r="2.6" />
+          <circle cx="27" cy="61" r="2.6" />
+          <circle cx="37" cy="61" r="2.6" />
+        </g>
+      </symbol>
+      <symbol id="i-mist" viewBox="0 0 64 64">
+        <g stroke="var(--icon-ink)" stroke-width="4" stroke-linecap="round">
+          <path d="M12 22h40M8 32h44M14 42h40M20 52h28" />
+        </g>
+      </symbol>
+      <symbol id="i-druppel" viewBox="0 0 16 16">
+        <path d="M8 1.5C6 5 3.5 7 3.5 10a4.5 4.5 0 0 0 9 0C12.5 7 10 5 8 1.5z" fill="currentColor" />
+      </symbol>
+      <symbol id="i-ster" viewBox="0 0 24 24">
+        <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="i-ster-vol" viewBox="0 0 24 24">
+        <path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor"
+          stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <header>
+    <div class="wrap top-in">
+      <a class="brand" href="#overzicht" aria-label="Buienradar Richtpunt, naar het overzicht">
+        <img class="school-logo" src="assets/richtpunt-logo.svg" alt="Richtpunt campus Ninove-Zottegem">
+        <span class="brand-divider" aria-hidden="true"></span>
+        <span><span class="brand-name">Buienradar</span><span class="brand-sub">Zottegem en Ninove</span></span>
+      </a>
+      <div class="city-switch" role="group" aria-label="Kies een schoollocatie">
+        <button class="city-btn" type="button" data-city="Zottegem">Zottegem</button>
+        <button class="city-btn" type="button" data-city="Ninove">Ninove</button>
+      </div>
+    </div>
+    <nav class="tabs" aria-label="Hoofdmenu">
+      <div class="wrap">
+        <a href="#overzicht" data-nav="overzicht"><span class="l">Overzicht</span><span class="s">overzicht</span></a>
+        <a href="#uur" data-nav="uur"><span class="l">Weer per uur</span><span class="s">uur</span></a>
+        <a href="#dagen" data-nav="dagen"><span class="l">Komende dagen</span><span class="s">dagen</span></a>
+        <a href="#radar" data-nav="radar"><span class="l">Neerslagradar</span><span class="s">radar</span></a>
+      </div>
+    </nav>
+  </header>
+  <p class="sr" id="live" role="status" aria-live="polite"></p>
+
+  <main>
+    <!-- 1. startpagina -->
+    <section class="view" data-view="overzicht" id="v-overzicht" aria-label="Overzicht"></section>
+    <!-- 2. weer per uur -->
+    <section class="view" data-view="uur" id="v-uur" aria-label="Weer per uur" hidden></section>
+    <!-- 3. meerdaagse verwachting -->
+    <section class="view" data-view="dagen" id="v-dagen" aria-label="Komende dagen" hidden></section>
+    <!-- 4. neerslagradar -->
+    <section class="view" data-view="radar" id="v-radar" aria-label="Neerslagradar" hidden></section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div><b>Buienradar</b>
+        <p>Schoolproject voor Richtpunt campus Ninove-Zottegem.</p>
+      </div>
+      <p id="source">Weergegevens: Open-Meteo.com (CC BY 4.0). Kaart is schematisch.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
